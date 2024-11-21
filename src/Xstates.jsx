@@ -63,7 +63,7 @@ function XStates() {
   const handleCityChange = (e) => {
     setSelectedCity(e.target.value);
     setMessage(
-      `You Selected ${e.target.value}, ${selectedState}, ${selectedCountry}`
+      `You selected ${e.target.value}, ${selectedState}, ${selectedCountry}`
     );
   };
 
