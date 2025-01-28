@@ -78,6 +78,9 @@ function XStates() {
           value={selectedCountry}
           onChange={handleCountryChange}
         >
+                      <option value="">
+ Select Country
+            </option>
           {countries.map((country) => (
             <option key={country} value={country}>
               {country}
@@ -95,6 +98,9 @@ function XStates() {
           onChange={handleStateChange}
           disabled={!selectedCountry}
         >
+                                <option value="">
+ Select State
+            </option>
           {states.map((state) => (
             <option key={state} value={state}>
               {state}
@@ -112,6 +118,9 @@ function XStates() {
           onChange={handleCityChange}
           disabled={!selectedState}
         >
+                                <option value="">
+ Select City
+            </option>
           {cities.map((city) => (
             <option key={city} value={city}>
               {city}
