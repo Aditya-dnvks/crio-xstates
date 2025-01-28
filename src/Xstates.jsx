@@ -17,7 +17,7 @@ function XStates() {
     axios
       .get("https://crio-location-selector.onrender.com/countries")
       .then((response) => setCountries(response.data))
-      .catch((error) => console.error("Error fetching countries:", error));
+      .catch((error) => console.error("Error fetching countries:", error.message));
   }, []);
 
   // Fetch states when a country is selected
@@ -28,7 +28,7 @@ function XStates() {
           `https://crio-location-selector.onrender.com/country=${selectedCountry}/states`
         )
         .then((response) => setStates(response.data))
-        .catch((error) => console.error("Error fetching states:", error));
+        .catch((error) => console.error("Error fetching states:", error.message));
     }
   }, [selectedCountry]);
 
@@ -40,7 +40,7 @@ function XStates() {
           `https://crio-location-selector.onrender.com/country=${selectedCountry}/state=${selectedState}/cities`
         )
         .then((response) => setCities(response.data))
-        .catch((error) => console.error("Error fetching cities:", error));
+        .catch((error) => console.error("Error fetching cities:", error.message));
     }
   }, [selectedState]);
 
